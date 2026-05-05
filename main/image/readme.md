@@ -54,7 +54,7 @@ pip install pyinstaller
 Build the executable:
 
 ```bash
-pyinstaller --onefile --noconsole --name image_converter Unit_Converter_Tkinter_3.py
+pyinstaller --onefile --noconsole --name image_converter image_converter.py
 ```
 
 The executable file will be created in the `dist` folder.
