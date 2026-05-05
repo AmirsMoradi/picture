@@ -1,74 +1,88 @@
+# Image Format Converter
 
-# WebP Converter PRO
-
-WebP Converter PRO is a modern, lightweight, and portable Windows application built with **CustomTkinter**. It allows users to:
-
-- Convert images to **WebP** format
-- Remove background and replace it with white
-- Drag & Drop images directly into the app
-- Track progress with a built‑in **Progress Bar**
-- Select output location using **Save As dialog**
-- Export a portable EXE using PyInstaller
+A lightweight and modern desktop application built with **Python** and **CustomTkinter** for converting images between different formats.
 
 ---
 
-## Features
+## 🚀 Features
 
-### ✔ Convert to WebP
-Easily convert supported image formats such as JPG, PNG, BMP, TIFF, and more.
-
-### ✔ White Background Mode
-Remove transparent or complex backgrounds and replace them with pure white.
-
-### ✔ Drag & Drop Support
-Drop an image file into the application window to load it instantly.
-
-### ✔ Save As Dialog
-Choose where to store the final WebP output.
-
-### ✔ Progress Bar
-Visual feedback during conversion and background removal.
-
-### ✔ Portable Build
-Compile the application with PyInstaller and run it on any Windows machine.
+- Convert images to multiple formats:
+  - WEBP
+  - PNG
+  - JPG
+  - JPEG
+  - BMP
+- Clean and modern dark UI
+- File browser for selecting input images
+- Save As dialog for choosing output location
+- Automatic output filename suggestion
+- Error handling with user-friendly messages
+- Lightweight build (no AI dependencies)
 
 ---
 
-## Installation
-Install required dependencies:
+## 🛠 Requirements
+
+- Python 3.9+
+- Pillow
+- customtkinter
+
+Install dependencies:
 
 ```bash
-pip install pillow customtkinter rembg tkinterdnd2
+pip install pillow customtkinter
 ```
 
 ---
 
-## Build Portable EXE
-Use PyInstaller:
+## ▶️ Run the Application
 
 ```bash
-pyinstaller --noconsole --onefile --add-data "rembg;rembg" main.py
+python image_converter.py
 ```
-
-With custom icon:
-
-```bash
-pyinstaller --noconsole --onefile --icon=icon.ico --add-data "rembg;rembg" main.py
-```
-
-The EXE will be available in the `dist/` directory.
 
 ---
 
-## Supported Formats
-- JPG / JPEG
-- PNG
-- BMP
-- TIFF
-- WebP
+## 📦 Build Windows Executable (Portable)
+
+Install PyInstaller:
+
+```bash
+pip install pyinstaller
+```
+
+Build the executable:
+
+```bash
+pyinstaller --onefile --noconsole --name image_converter Unit_Converter_Tkinter_3.py
+```
+
+The executable file will be created in the `dist` folder.
 
 ---
 
-## Developer
-Python Developer: **Amirhossein Moradi**
+## 📁 Project Structure
 
+```
+main.py
+image_converter.py
+README.md
+```
+
+---
+
+## 💡 Notes
+
+- When converting to JPG/JPEG, images with transparency are automatically converted to RGB.
+- The application is fully portable when built with PyInstaller.
+- No internet connection required.
+
+---
+
+## 📜 License
+
+This project is provided for educational and personal use.
+
+---
+
+### Python Programmer: Amirhossein Moradi
